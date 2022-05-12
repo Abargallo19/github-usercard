@@ -64,20 +64,22 @@ cardInfo.appendChild(userFollowing);
 cardInfo.appendChild(userBio);
 
 card.classList.add("card");
-
 cardInfo.classList.add("card-info");
 headName.classList.add("name");
 userName.classList.add("username");
-profileLink = userObj.html_url;
+profileLink.href = userObj.html_url;
 
 cardImg.src = userObj.avatar_url;
 headName = userObj.name;
+profileLink = userObj.html_url;
+userLocation = userObj.location;
+userName = userobj.login;
+userBio = userObj.bio;
+userFollowers = userObj.followers;
+userFollowing = userObj.following;
 
 return cardWrapper;
 }
-
-//const Alless = gitUserCard({headname: "Mufasa"});
-//console.log(Alless);
 
 /*
   STEP 3: Create a function that accepts a single object as its only argument.
