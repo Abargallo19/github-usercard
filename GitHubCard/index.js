@@ -9,6 +9,7 @@ axios.get("https://api.github.com/users/Abargallo19")
 .then((res) => {
   console.log(res.data);
 })
+.catch(err => console.log(err))
 
 /*
   STEP 2: Inspect and study the data coming back, this is YOUR
@@ -63,19 +64,20 @@ cardInfo.appendChild(userFollowing);
 cardInfo.appendChild(userBio);
 
 card.classList.add("card");
-cardImg.src = userObj.src;
+
 cardInfo.classList.add("card-info");
 headName.classList.add("name");
 userName.classList.add("username");
-profileLink.href = userObj.href;
+profileLink = userObj.html_url;
 
-headName.textContent = userObj.headName;
+cardImg.src = userObj.avatar_url;
+headName = userObj.name;
 
 return cardWrapper;
 }
 
-const Alless = gitUserCard({headname: "Mufasa"});
-console.log(Alless);
+//const Alless = gitUserCard({headname: "Mufasa"});
+//console.log(Alless);
 
 /*
   STEP 3: Create a function that accepts a single object as its only argument.
