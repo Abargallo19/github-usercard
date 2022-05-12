@@ -36,6 +36,10 @@ const cardImg = document.createElement('img');
 const cardInfo = document.createElement('div');
 const name = document.createElement('h3');
 const userName = document.createElement('p');
+const location = document.createElement('p');
+const profile = document.createElement('p');
+const profileLink = document.createElement('a');
+
 
 }
 
