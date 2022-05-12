@@ -6,10 +6,11 @@ import axios from 'axios';
     https://api.github.com/users/Abargallo19
 */
 axios.get("https://api.github.com/users/Abargallo19")
-.then((res) => {
+.then(res => {
+  document.querySelector('.cards').appendChild(gitUserCard(res.data))
   console.log(res.data);
 })
-.catch(err => console.log(err))
+.catch(err => console.error(err))
 
 /*
   STEP 2: Inspect and study the data coming back, this is YOUR
@@ -38,7 +39,6 @@ axios.get("https://api.github.com/users/Abargallo19")
 const followersArray = [];
 
 function gitUserCard(userObj){
-const cardWrapper = document.querySelector(".cards");
 const card = document.createElement('div');
 const cardImg = document.createElement('img');
 const cardInfo = document.createElement('div');
@@ -51,7 +51,7 @@ const userFollowers = document.createElement('p');
 const userFollowing = document.createElement('p');
 const userBio = document.createElement('p');
 
-cardWrapper.appendChild(card);
+
 card.appendChild(cardImg);
 card.appendChild(cardInfo);
 cardInfo.appendChild(headName);
@@ -72,7 +72,7 @@ profileLink.href = userObj.html_url;
 cardImg.src = userObj.avatar_url;
 cardImg.alt = 'github user';
 headName.textContent = userObj.name;
-userName.textContent = userobj.login;
+userName.textContent = userObj.login;
 userLocation.textContent = userObj.location;
 userProfile.textContent = "Profile";
 profileLink.textContent = "Profile Link";
@@ -82,7 +82,7 @@ userFollowing.textContent = `Following: ${userObj.following}`;
 userBio.textContent = userObj.bio;
 
 
-return cardWrapper;
+return card;
 }
 
 /*
