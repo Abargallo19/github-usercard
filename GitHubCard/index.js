@@ -70,13 +70,17 @@ userName.classList.add("username");
 profileLink.href = userObj.html_url;
 
 cardImg.src = userObj.avatar_url;
-headName = userObj.name;
-profileLink = userObj.html_url;
-userLocation = userObj.location;
-userName = userobj.login;
-userBio = userObj.bio;
-userFollowers = userObj.followers;
-userFollowing = userObj.following;
+cardImg.alt = 'github user';
+headName.textContent = userObj.name;
+userName.textContent = userobj.login;
+userLocation.textContent = userObj.location;
+userProfile.textContent = "Profile";
+profileLink.textContent = "Profile Link";
+profileLink.href = userObj.html_url;
+userFollowers.textContent = `Followers: ${userObj.followers}`;
+userFollowing.textContent = `Following: ${userObj.following}`;
+userBio.textContent = userObj.bio;
+
 
 return cardWrapper;
 }
