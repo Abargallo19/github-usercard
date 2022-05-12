@@ -43,6 +43,16 @@ const userFollowers = document.createElement('p');
 const userFollowing = document.createElement('p');
 const userBio = document.createElement('p');
 
+card.appendChild(cardImg);
+card.appendChild(cardInfo);
+cardInfo.appendChild(name);
+cardInfo.appendChild(userName);
+cardInfo.appendChild(location);
+cardInfo.appendChild(profile);
+profile.appendChild(profileLink);
+cardInfo.appendChild(userFollowers);
+cardInfo.appendChild(userFollowing);
+cardInfo.appendChild(userBio);
 
 
 card.classList.add("card");
