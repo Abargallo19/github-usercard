@@ -39,6 +39,10 @@ const userName = document.createElement('p');
 const location = document.createElement('p');
 const profile = document.createElement('p');
 const profileLink = document.createElement('a');
+const userFollowers = document.createElement('p');
+const userFollowing = document.createElement('p');
+const userBio = document.createElement('p');
+
 
 
 }
