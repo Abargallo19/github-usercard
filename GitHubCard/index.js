@@ -34,10 +34,10 @@ function gitUserCard(userObj){
 const card = document.createElement('div');
 const cardImg = document.createElement('img');
 const cardInfo = document.createElement('div');
-const name = document.createElement('h3');
+const headName = document.createElement('h3');
 const userName = document.createElement('p');
-const location = document.createElement('p');
-const profile = document.createElement('p');
+const userLocation = document.createElement('p');
+const userProfile = document.createElement('p');
 const profileLink = document.createElement('a');
 const userFollowers = document.createElement('p');
 const userFollowing = document.createElement('p');
@@ -45,22 +45,25 @@ const userBio = document.createElement('p');
 
 card.appendChild(cardImg);
 card.appendChild(cardInfo);
-cardInfo.appendChild(name);
+cardInfo.appendChild(headName);
 cardInfo.appendChild(userName);
-cardInfo.appendChild(location);
-cardInfo.appendChild(profile);
-profile.appendChild(profileLink);
+cardInfo.appendChild(userLocation);
+cardInfo.appendChild(userProfile);
+userProfile.appendChild(profileLink);
 cardInfo.appendChild(userFollowers);
 cardInfo.appendChild(userFollowing);
 cardInfo.appendChild(userBio);
 
-
 card.classList.add("card");
 cardImg.src = userObj.src;
 cardInfo.classList.add("card-info");
-name.classList.add("name");
+headName.classList.add("name");
 userName.classList.add("username");
 profileLink.href = userObj.href;
+
+headName.textContent = userObj.headName;
+
+return card;
 }
 /*
   STEP 3: Create a function that accepts a single object as its only argument.
