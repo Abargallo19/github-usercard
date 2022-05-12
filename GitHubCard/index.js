@@ -30,6 +30,16 @@
 
 const followersArray = [];
 
+function gitUserCard(userObj){
+const card = document.createElement('div');
+const cardImg = document.createElement('img');
+const cardInfo = document.createElement('div');
+const name = document.createElement('h3');
+const userName = document.createElement('p');
+
+}
+
+
 /*
   STEP 3: Create a function that accepts a single object as its only argument.
     Using DOM methods and properties, create and return the following markup:
