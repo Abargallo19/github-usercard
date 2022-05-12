@@ -3,8 +3,12 @@ import axios from 'axios';
 /*
   STEP 1: using axios, send a GET request to the following URL
     (replacing the placeholder with your Github name):
-    https://api.github.com/users/<your name>
+    https://api.github.com/users/Abargallo19
 */
+axios.get("https://api.github.com/users/Abargallo19")
+.then((res) => {
+  console.log(res.data);
+})
 
 /*
   STEP 2: Inspect and study the data coming back, this is YOUR
@@ -33,6 +37,7 @@ import axios from 'axios';
 const followersArray = [];
 
 function gitUserCard(userObj){
+const cardWrapper = document.querySelector(".cards");
 const card = document.createElement('div');
 const cardImg = document.createElement('img');
 const cardInfo = document.createElement('div');
@@ -45,6 +50,7 @@ const userFollowers = document.createElement('p');
 const userFollowing = document.createElement('p');
 const userBio = document.createElement('p');
 
+cardWrapper.appendChild(card);
 card.appendChild(cardImg);
 card.appendChild(cardInfo);
 cardInfo.appendChild(headName);
@@ -65,10 +71,10 @@ profileLink.href = userObj.href;
 
 headName.textContent = userObj.headName;
 
-return card;
+return cardWrapper;
 }
-const cardWrapper = document.querySelector(".cards");
-const Alless = cardWrapper.appendChild(gitUserCard({headname: "Mufasa"}));
+
+const Alless = gitUserCard({headname: "Mufasa"});
 console.log(Alless);
 
 /*
