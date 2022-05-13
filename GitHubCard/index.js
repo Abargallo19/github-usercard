@@ -5,7 +5,7 @@ import axios from 'axios';
     (replacing the placeholder with your Github name):
     https://api.github.com/users/Abargallo19
 */
-const followersArray = ['Allesandria', 'RealSadLemon', 'jzkime', 'GeoffKellyNC'];
+const followersArray = ['Abargallo19', 'RealSadLemon', 'jzkime', 'GeoffKellyNC'];
 
 for (let i = 0; i < followersArray.length; i++) {
   makeGitCard(followersArray[i]);
