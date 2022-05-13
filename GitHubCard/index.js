@@ -58,7 +58,7 @@ cardInfo.appendChild(headName);
 cardInfo.appendChild(userName);
 cardInfo.appendChild(userLocation);
 cardInfo.appendChild(userProfile);
-userProfile.appendChild(profileLink);
+cardInfo.appendChild(profileLink);
 cardInfo.appendChild(userFollowers);
 cardInfo.appendChild(userFollowing);
 cardInfo.appendChild(userBio);
@@ -67,7 +67,7 @@ card.classList.add("card");
 cardInfo.classList.add("card-info");
 headName.classList.add("name");
 userName.classList.add("username");
-profileLink.href = userObj.html_url;
+
 
 cardImg.src = userObj.avatar_url;
 cardImg.alt = 'github user';
